@@ -21,7 +21,7 @@ h5 {
 .navbar {
 	height: 5rem;
 	padding-block: 0;
-	background-color: #fff;
+	background-color: #F9F9F8;
 }
 
 .navbar-brand {
@@ -116,7 +116,7 @@ h5 {
 
 .about-section h2, 
 .about-section p {
-	color: #FFFFFF;
+	color: #F9F9F8;
 }
 
 /* === Footer === */
@@ -147,18 +147,18 @@ h5 {
 }
 
 .footer-nav .nav-link {
-	color: #FFFFFF;
+	color: #F9F9F8;
     padding: 0.15rem 0;
     font-size: 0.875rem;
 }
 
 .footer-nav .nav-link:hover {
-	color: #B8C7DA;
+	color: #1D3353;
 }
 
 .footer-legal {
 	flex-basis: 100%;
-	color: #FFFFFF;
+	color: #F9F9F8;
     font-size: 0.75rem;
     text-align: center;
 	margin-left: 0;
@@ -172,7 +172,7 @@ h5 {
 }
 
 .footer-legal a {
-    color: #FFFFFF;
+    color: #F9F9F8;
     text-decoration: none;
 }
 
@@ -182,7 +182,7 @@ h5 {
 
 .footer-legal p {
     margin: 0;
-    color: #FFFFFF;
+    color: #F9F9F8;
 }
 
 
