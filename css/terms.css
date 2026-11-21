@@ -198,32 +198,13 @@ footer {
 
 @media (max-width: 768px) {
 
-   body > header {
-        height: auto;
-        min-height: 70px;
-    }
-
-    body > header .nav-container {
-        width: 90%;
+  .nav-container {
+     width: 90%;
         height: auto;
         padding: 12px 0;
         flex-direction: column;
         gap: 12px;
-    }
-
-    body > header .logo {
-        font-size: 22px;
-    }
-
-    body > header nav {
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 12px 20px;
-    }
-
-    body > header nav a {
-        font-size: 12px;
-    }
+  }
    
     .footer-container {
         flex-direction: column;
