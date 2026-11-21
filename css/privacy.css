@@ -1,6 +1,9 @@
 
-/* GOOGLE FONTS */
-@import url('https://fonts.googleapis.com/css2?family=Nata+Sans:wght@900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+/* =========================
+   GOOGLE FONTS
+========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Nata+Sans:wght@600;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
 /* =========================
    GENERAL STYLES
@@ -8,7 +11,7 @@
 
 :root {
     --brand-red: #a51f26;
-    --footer-navy: #1d3558;
+    --footer-navy: #1D3353;
     --text: #171717;
     --muted: #555;
 }
@@ -25,8 +28,8 @@ body {
     margin: 0;
     padding: 0;
     color: var(--text);
-    background: #fff;
-    font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+    background: #F9F9F8;
+    font-family: 'Plus Jakarta Sans', 'Roboto', sans-serif;
 }
 
 /* =========================
@@ -35,14 +38,13 @@ body {
 
 .site-header {
     width: 100%;
-    min-height: 72px;
-    background-color: #a51f26;
-    color: white;
+    min-height: 5rem;
+    background-color: #F9F9F8;
 }
 
 .header-inner {
     max-width: 1250px;
-    min-height: 72px;
+    min-height: 5rem;
     margin: auto;
     padding: 0 20px;
     display: flex;
@@ -50,10 +52,14 @@ body {
     justify-content: space-between;
 }
 
-/* HEADER LOGO */
+/* INTERLUDE LOGO */
 
 .wordmark {
-    color: white;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0;
+    color: #1D3353;
     font-family: 'Nata Sans', sans-serif;
     font-size: 23px;
     font-weight: 900;
@@ -69,7 +75,7 @@ body {
 }
 
 .main-nav a {
-    color: white;
+    color: #1D3353;
     font-family: 'Nata Sans', sans-serif;
     font-size: 16px;
     font-weight: 900;
@@ -95,7 +101,7 @@ body {
     width: 22px;
     height: 2px;
     margin: 4px 0;
-    background: white;
+    background: #1D3353;
 }
 
 /* =========================
@@ -121,9 +127,10 @@ body {
 
 .page-heading h1 {
     margin: 0 0 6px;
+    font-family: 'Nata Sans', 'Inter', sans-serif;
     font-size: 24px;
     line-height: 1.3;
-    font-weight: 800;
+    font-weight: 900;
     letter-spacing: -0.55px;
 }
 
@@ -152,9 +159,10 @@ body {
 
 .policy-copy h2 {
     margin: 0 0 7px;
+    font-family: 'Nata Sans', 'Inter', sans-serif;
     font-size: 15px;
     line-height: 1.35;
-    font-weight: 700;
+    font-weight: 900;
 }
 
 .policy-copy section p {
@@ -188,19 +196,21 @@ body {
 
 .site-footer {
     width: 100%;
-    min-height: 150px;
-    background-color: #1d3558;
-    color: white;
+    background-color: #1D3353;
+    color: #F9F9F8;
+    padding-block: 1.5rem;
 }
 
 .footer-inner {
     max-width: 1250px;
-    min-height: 150px;
     margin: auto;
-    padding: 25px 20px;
+    padding: 0 20px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
+    column-gap: 2rem;
+    row-gap: 1rem;
 }
 
 /* FOOTER LOGO */
@@ -208,15 +218,16 @@ body {
 .equalizer-logo {
     display: inline-flex;
     align-items: center;
-    width: 110px;
-    margin-top: 0;
+    width: 4rem;
+    height: 3.5rem;
+    margin: 0;
     text-decoration: none;
 }
 
 .equalizer-logo img {
     display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: contain;
 }
 
@@ -225,14 +236,13 @@ body {
 .footer-nav {
     display: flex;
     flex-direction: column;
-    gap: 6px;
 }
 
 .footer-nav a {
-    color: white;
+    color: #F9F9F8;
+    padding: 0.15rem 0;
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 15px;
-    font-weight: 400;
+    font-size: 0.875rem;
     text-decoration: none;
 }
 
@@ -240,28 +250,26 @@ body {
     text-decoration: underline;
 }
 
-/* PRIVACY POLICY AND TERMS LINKS */
+/* FOOTER LEGAL INFORMATION */
 
 .footer-legal {
-    width: auto;
-    margin-top: 0;
-    text-align: right;
+    flex-basis: 100%;
+    color: #F9F9F8;
+    font-size: 0.75rem;
+    text-align: center;
+    margin-left: 0;
 }
 
 .footer-legal-links {
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 10px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.65);
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
 }
 
 .footer-legal-links a,
 .footer-legal-links span {
-    color: white;
-    font-size: 14px;
-    font-weight: 700;
+    color: #F9F9F8;
     text-decoration: none;
 }
 
@@ -270,18 +278,59 @@ body {
 }
 
 .footer-legal p {
-    font-size: 13px;
-    font-weight: 600;
-    margin-top: 20px;
-    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+    color: #F9F9F8;
+}
+
+/* =========================
+   TABLET AND WIDER
+========================= */
+
+@media (min-width: 768px) {
+
+    /* HEADER */
+
+    .header-inner {
+        min-height: 5rem;
+    }
+
+    /* FOOTER */
+
+    .site-footer {
+        padding-block: 2.5rem;
+    }
+
+    .footer-inner {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        gap: 8rem;
+    }
+
+    /* FOOTER LOGO SIZE */
+
+    .equalizer-logo {
+        width: 5rem;
+        height: 4.5rem;
+    }
+
+    /* FOOTER LEGAL */
+
+    .footer-legal {
+        flex-basis: auto;
+        margin-left: auto;
+        text-align: right;
+    }
+
+    .footer-legal-links {
+        justify-content: flex-end;
+    }
 }
 
 /* =========================
    MOBILE RESPONSIVENESS
-   MATCH CONTACT CSS
 ========================= */
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 
     /* HEADER */
 
@@ -355,13 +404,13 @@ body {
         flex-direction: column;
         text-align: center;
         align-items: center;
-        gap: 22px;
-        padding: 25px 20px;
+        gap: 2rem;
+        padding: 0 20px;
     }
 
     .equalizer-logo {
-        width: 110px;
-        margin-top: 0;
+        width: 4rem;
+        height: 3.5rem;
     }
 
     .footer-nav {
@@ -369,7 +418,7 @@ body {
     }
 
     .footer-nav a {
-        font-size: 15px;
+        font-size: 0.875rem;
     }
 
     .footer-legal {
@@ -382,6 +431,6 @@ body {
     }
 
     .footer-legal p {
-        font-size: 13px;
+        font-size: 0.75rem;
     }
 }
