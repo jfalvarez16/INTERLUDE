@@ -1,5 +1,6 @@
 /* === General Style === */
-@import url('https://fonts.googleapis.com/css2?family=Nata+Sans:wght@900&family=Plus+Jakarta+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nata+Sans:wght@600;900&family=Plus+Jakarta+Sans&display=swap');
+
 body {
 	font-family: 'Plus Jakarta Sans', 'Roboto', sans-serif;
 	color: #F9F9F8;
@@ -9,6 +10,11 @@ h1, h2 {
 	font-family: 'Nata Sans', 'Inter', sans-serif;
 	font-weight: 900;
 	color: #F9F9F8;
+}
+
+h5 {
+	font-family: 'Nata Sans', 'Inter', sans-serif;
+	font-weight: 600;
 }
 
 /* === Navigation === */
@@ -53,14 +59,6 @@ h1, h2 {
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-}
-
-.hero-h1 {
-	color: #FFFFFF;
-}
-
-.hero-p {
-	color: #FFFFFF;
 }
 
 /* === Product Display === */
@@ -187,6 +185,14 @@ h1, h2 {
 
 /* === Tablet and Wider === */
 @media (min-width: 768px) {
+	.hero-container {
+		margin-left: 5rem;
+	}
+	
+	.about-container {
+		margin-left: 12rem;
+	}
+	
     .site-footer {
         padding-block: 2.5rem;
     }
@@ -207,6 +213,11 @@ h1, h2 {
         margin-left: auto;
         text-align: right;
     }
+
+    .footer-legal-links {
+        justify-content: flex-end;
+    }
+}
 
     .footer-legal-links {
         justify-content: flex-end;
