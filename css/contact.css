@@ -1,4 +1,7 @@
 
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Nata+Sans:wght@900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
 /* GENERAL */
 * {
     box-sizing: border-box;
@@ -7,7 +10,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Plus Jakarta Sans', Arial, sans-serif;
     color: #222;
     background-color: #ffffff;
 }
@@ -24,16 +27,17 @@ body {
     min-height: 72px;
     margin: auto;
     padding: 0 20px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
+/* NATA SANS HEADER FONT */
 .brand {
     color: white;
+    font-family: 'Nata Sans', sans-serif;
     font-size: 23px;
-    font-weight: bold;
+    font-weight: 900;
     text-decoration: none;
 }
 
@@ -44,8 +48,9 @@ body {
 
 .navigation a {
     color: white;
+    font-family: 'Nata Sans', sans-serif;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 900;
     text-decoration: none;
 }
 
@@ -108,7 +113,7 @@ body {
     border: 1px solid #d5dce3;
     border-radius: 3px;
     font-size: 16px;
-    font-family: Arial, sans-serif;
+    font-family: inherit;
 }
 
 .form-group input {
@@ -190,7 +195,6 @@ body {
     min-height: 150px;
     margin: auto;
     padding: 25px 20px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
