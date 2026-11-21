@@ -1,7 +1,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
-/* GENERAL */
+/* =========================
+   GENERAL
+========================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +18,10 @@ body {
     line-height: 1.6;
 }
 
-/* HEADER */
+/* =========================
+   HEADER / NAVIGATION BAR
+========================= */
+
 header {
     background-color: #A21F1E;
     width: 100%;
@@ -60,7 +66,10 @@ header nav a:hover {
     opacity: 0.8;
 }
 
-/* MAIN PRIVACY POLICY CONTENT */
+/* =========================
+   MAIN PRIVACY POLICY
+========================= */
+
 .policy-main {
     width: 100%;
 }
@@ -71,7 +80,10 @@ header nav a:hover {
     margin: 90px auto 110px;
 }
 
-/* PRIVACY POLICY HEADING */
+/* =========================
+   CENTERED PAGE HEADING
+========================= */
+
 .page-heading {
     display: block;
     width: 100%;
@@ -82,12 +94,10 @@ header nav a:hover {
 .page-heading h1 {
     display: block;
     width: 100%;
-
     font-family: 'Nata Sans', sans-serif;
     font-size: 32px;
     font-weight: 900;
     text-align: center;
-
     margin: 0 auto;
 }
 
@@ -99,7 +109,10 @@ header nav a:hover {
     margin-top: 8px;
 }
 
-/* PRIVACY POLICY TEXT */
+/* =========================
+   PRIVACY POLICY TEXT
+========================= */
+
 .policy-copy p,
 .policy-copy li {
     font-family: 'Plus Jakarta Sans', sans-serif;
@@ -137,7 +150,10 @@ header nav a:hover {
     text-decoration: underline;
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
+
 footer {
     background-color: #1D3353;
     width: 100%;
@@ -154,6 +170,7 @@ footer {
 }
 
 /* FOOTER LOGO */
+
 .footer-logo img {
     width: 120px;
     height: 120px;
@@ -161,6 +178,7 @@ footer {
 }
 
 /* FOOTER NAVIGATION */
+
 .footer-links {
     display: flex;
     flex-direction: column;
@@ -181,6 +199,7 @@ footer {
 }
 
 /* FOOTER POLICY LINKS */
+
 .footer-policy {
     margin-left: auto;
     padding-top: 8px;
@@ -206,7 +225,8 @@ footer {
     color: #FFFFFF;
 }
 
-/* FOOTER LINE */
+/* FOOTER DIVIDER */
+
 .policy-line {
     width: calc(100% + 20px);
     height: 1px;
@@ -216,6 +236,7 @@ footer {
 }
 
 /* COPYRIGHT */
+
 .footer-policy p {
     font-family: 'Nata Sans', sans-serif;
     font-size: 10px;
@@ -224,10 +245,14 @@ footer {
     margin-top: 10px;
 }
 
-/* MOBILE RESPONSIVENESS */
+/* =========================
+   MOBILE RESPONSIVENESS
+========================= */
+
 @media screen and (max-width: 768px) {
 
     /* HEADER */
+
     header {
         height: auto;
         padding: 18px 0;
@@ -253,6 +278,7 @@ footer {
     }
 
     /* MAIN CONTENT */
+
     .policy-container {
         width: 88%;
         margin: 45px auto 60px;
@@ -283,6 +309,7 @@ footer {
     }
 
     /* FOOTER */
+
     .footer-container {
         flex-direction: column;
         gap: 30px;
