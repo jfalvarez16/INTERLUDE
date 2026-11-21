@@ -178,24 +178,30 @@ body {
 ========================= */
 
 .site-footer {
-    min-height: 106px;
+    width: 100%;
+    min-height: 177px;
     background: var(--footer-navy);
     color: #fff;
 }
 
 .footer-inner {
-    width: min(100% - 80px, 1100px);
-    min-height: 106px;
+    width: min(100% - 80px, 1280px);
+    min-height: 177px;
     margin: 0 auto;
+    padding-top: 24px;
+
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
 }
+
+/* LOGO */
 
 .equalizer-logo {
     display: inline-flex;
     align-items: center;
-    width: 75px;
+    width: 115px;
+    margin-top: 23px;
     text-decoration: none;
 }
 
@@ -206,22 +212,27 @@ body {
     object-fit: contain;
 }
 
+/* FOOTER NAVIGATION */
+
 .footer-nav {
     display: flex;
     flex-direction: column;
-    gap: 3px;
-    margin-left: 55px;
+    gap: 12px;
+    margin: 0;
 }
 
 .footer-nav a {
     color: #fff;
     text-decoration: none;
-    font-size: 9px;
-    font-weight: 500;
+    font-size: 13px;
+    font-weight: 700;
 }
 
+/* PRIVACY POLICY AND TERMS LINKS */
+
 .footer-legal {
-    width: 148px;
+    width: 225px;
+    margin-top: 6px;
     text-align: left;
 }
 
@@ -229,23 +240,25 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 5px;
-    padding-bottom: 6px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.55);
+    gap: 8px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.65);
 }
 
 .footer-legal-links a,
 .footer-legal-links span {
     color: #fff;
     text-decoration: none;
-    font-size: 8px;
+    font-size: 11px;
+    font-weight: 700;
     white-space: nowrap;
 }
 
 .footer-legal p {
-    margin: 8px 0 0;
-    font-size: 8px;
-    color: rgba(255, 255, 255, 0.85);
+    margin: 12px 0 0;
+    font-size: 9px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
 }
 
 /* =========================
@@ -253,6 +266,8 @@ body {
 ========================= */
 
 @media (max-width: 767px) {
+
+    /* Header */
 
     .header-inner {
         width: calc(100% - 36px);
@@ -288,6 +303,8 @@ body {
         font-size: 11px;
     }
 
+    /* Privacy Policy Content */
+
     .policy-main {
         min-height: auto;
         padding: 42px 22px 55px;
@@ -321,30 +338,44 @@ body {
         margin-top: 30px;
     }
 
+    /* Footer */
+
     .footer-inner {
         width: calc(100% - 40px);
         min-height: 125px;
+        padding: 25px 0;
         gap: 18px;
+        align-items: center;
     }
 
     .equalizer-logo {
-        width: 60px;
+        width: 65px;
+        margin-top: 0;
     }
 
     .footer-nav {
-        margin-left: 0;
+        gap: 8px;
     }
 
     .footer-nav a {
-        font-size: 8px;
+        font-size: 10px;
     }
 
     .footer-legal {
-        width: 145px;
+        width: 155px;
+        margin-top: 0;
+    }
+
+    .footer-legal-links {
+        gap: 5px;
+        padding-bottom: 8px;
     }
 
     .footer-legal-links a,
-    .footer-legal-links span,
+    .footer-legal-links span {
+        font-size: 7px;
+    }
+
     .footer-legal p {
         font-size: 7px;
     }
@@ -354,12 +385,11 @@ body {
    SMALL MOBILE SCREENS
 ========================= */
 
-@media (max-width: 360px) {
+@media (max-width: 400px) {
 
     .footer-inner {
         flex-wrap: wrap;
         justify-content: space-between;
-        padding: 20px 0;
     }
 
     .footer-legal {
@@ -368,13 +398,25 @@ body {
 }
 
 /* =========================
-   LARGE DESKTOP SCREENS
+   DESKTOP LAYOUT
 ========================= */
 
-@media (min-width: 900px) {
+@media (min-width: 768px) {
 
     .header-inner {
         width: min(100% - 80px, 1100px);
+    }
+
+    .main-nav {
+        display: flex;
+        position: static;
+        flex-direction: row;
+        gap: 29px;
+        padding: 0;
+    }
+
+    .menu-toggle {
+        display: none;
     }
 
     .policy-container {
@@ -382,6 +424,6 @@ body {
     }
 
     .footer-inner {
-        width: min(100% - 80px, 1100px);
+        width: min(100% - 80px, 1280px);
     }
 }
