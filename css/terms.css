@@ -197,20 +197,6 @@ footer {
 /* MOBILE */
 
 @media (max-width: 768px) {
-
-   .nav-container {
-        flex-direction: column;
-        justify-content: center;
-        gap: 1rem;
-        padding-block: 1rem;
-    }
-
-    nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
-    }
    
     .footer-container {
         flex-direction: column;
