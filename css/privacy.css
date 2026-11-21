@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Nata+Sans:wght@900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
 /* GENERAL */
 * {
@@ -11,28 +11,29 @@
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
     background-color: #F9F9F8;
-    color: #222;
+    color: #222222;
     line-height: 1.6;
 }
 
 /* HEADER */
-.site-header {
+header {
     background-color: #A21F1E;
-    height: 70px;
     width: 100%;
+    height: 70px;
 }
 
-.header-container {
+.nav-container {
     width: 90%;
     max-width: 1200px;
     height: 100%;
-    margin: auto;
+    margin: 0 auto;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.brand {
+.logo {
     font-family: 'Nata Sans', sans-serif;
     font-size: 24px;
     font-weight: 900;
@@ -40,13 +41,13 @@ body {
     text-decoration: none;
 }
 
-.navigation {
+header nav {
     display: flex;
     align-items: center;
     gap: 42px;
 }
 
-.navigation a {
+header nav a {
     font-family: 'Nata Sans', sans-serif;
     font-size: 18px;
     font-weight: 900;
@@ -55,11 +56,11 @@ body {
     text-transform: uppercase;
 }
 
-.navigation a:hover {
+header nav a:hover {
     opacity: 0.8;
 }
 
-/* PRIVACY POLICY CONTENT */
+/* MAIN PRIVACY POLICY CONTENT */
 .policy-main {
     width: 100%;
 }
@@ -70,18 +71,23 @@ body {
     margin: 90px auto 110px;
 }
 
-/* CENTERED PAGE HEADING */
+/* PRIVACY POLICY HEADING */
 .page-heading {
+    display: block;
     width: 100%;
     text-align: center;
-    margin-bottom: 35px;
+    margin: 0 auto 35px;
 }
 
 .page-heading h1 {
+    display: block;
+    width: 100%;
+
     font-family: 'Nata Sans', sans-serif;
     font-size: 32px;
     font-weight: 900;
     text-align: center;
+
     margin: 0 auto;
 }
 
@@ -94,6 +100,17 @@ body {
 }
 
 /* PRIVACY POLICY TEXT */
+.policy-copy p,
+.policy-copy li {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.policy-copy p {
+    margin-bottom: 15px;
+}
+
 .policy-copy h2 {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 21px;
@@ -102,17 +119,13 @@ body {
     margin-bottom: 12px;
 }
 
-.policy-copy p,
-.policy-copy li {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 14px;
-    line-height: 1.8;
-    margin-bottom: 15px;
-}
-
 .policy-copy ul {
     padding-left: 25px;
     margin-bottom: 15px;
+}
+
+.policy-copy li {
+    margin-bottom: 8px;
 }
 
 .policy-copy a {
@@ -125,33 +138,37 @@ body {
 }
 
 /* FOOTER */
-.site-footer {
+footer {
     background-color: #1D3353;
+    width: 100%;
     padding: 45px 0;
 }
 
 .footer-container {
     width: 90%;
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto;
+
     display: flex;
     align-items: flex-start;
 }
 
+/* FOOTER LOGO */
 .footer-logo img {
     width: 120px;
     height: 120px;
     object-fit: contain;
 }
 
-.footer-navigation {
+/* FOOTER NAVIGATION */
+.footer-links {
     display: flex;
     flex-direction: column;
     gap: 8px;
     margin-left: 180px;
 }
 
-.footer-navigation a {
+.footer-links a {
     font-family: 'Nata Sans', sans-serif;
     font-size: 14px;
     font-weight: 700;
@@ -159,24 +176,25 @@ body {
     text-decoration: none;
 }
 
-.footer-navigation a:hover {
+.footer-links a:hover {
     opacity: 0.8;
 }
 
-.footer-information {
+/* FOOTER POLICY LINKS */
+.footer-policy {
     margin-left: auto;
     padding-top: 8px;
     text-align: right;
 }
 
-.footer-links {
+.policy-links {
     display: inline-flex;
     align-items: center;
     gap: 8px;
 }
 
-.footer-links a,
-.footer-links span {
+.policy-links a,
+.policy-links span {
     font-family: 'Nata Sans', sans-serif;
     font-size: 12px;
     font-weight: 700;
@@ -184,10 +202,11 @@ body {
     text-decoration: none;
 }
 
-.footer-links a:hover {
+.policy-links a:hover {
     color: #FFFFFF;
 }
 
+/* FOOTER LINE */
 .policy-line {
     width: calc(100% + 20px);
     height: 1px;
@@ -196,7 +215,8 @@ body {
     margin-left: -10px;
 }
 
-.footer-information p {
+/* COPYRIGHT */
+.footer-policy p {
     font-family: 'Nata Sans', sans-serif;
     font-size: 10px;
     font-weight: 700;
@@ -208,37 +228,38 @@ body {
 @media screen and (max-width: 768px) {
 
     /* HEADER */
-    .site-header {
+    header {
         height: auto;
         padding: 18px 0;
     }
 
-    .header-container {
+    .nav-container {
         flex-direction: column;
         gap: 15px;
     }
 
-    .brand {
+    .logo {
         font-size: 22px;
     }
 
-    .navigation {
+    header nav {
         justify-content: center;
         flex-wrap: wrap;
         gap: 12px 20px;
     }
 
-    .navigation a {
+    header nav a {
         font-size: 12px;
     }
 
-    /* PRIVACY POLICY CONTENT */
+    /* MAIN CONTENT */
     .policy-container {
         width: 88%;
         margin: 45px auto 60px;
     }
 
     .page-heading {
+        width: 100%;
         text-align: center;
         margin-bottom: 30px;
     }
@@ -272,11 +293,11 @@ body {
         height: 100px;
     }
 
-    .footer-navigation {
+    .footer-links {
         margin-left: 0;
     }
 
-    .footer-information {
+    .footer-policy {
         margin-left: 0;
         text-align: left;
     }
