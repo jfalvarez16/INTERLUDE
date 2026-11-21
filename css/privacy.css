@@ -37,7 +37,7 @@ body {
 
 /* ===============================
    HEADER
-   SAME AS CONTACT PAGE
+   MATCH TERMS PAGE
 ================================ */
 
 .site-header {
@@ -56,7 +56,6 @@ body {
     align-items: center;
 }
 
-
 /* HEADER LOGO */
 
 .brand {
@@ -67,12 +66,10 @@ body {
     text-decoration: none;
 }
 
-
 /* HEADER NAVIGATION */
 
 .navigation {
     display: flex;
-    align-items: center;
     gap: 42px;
 }
 
@@ -85,9 +82,6 @@ body {
     text-transform: uppercase;
 }
 
-
-/* HEADER HOVER */
-
 .navigation a:hover {
     opacity: 0.8;
 }
@@ -95,80 +89,83 @@ body {
 
 /* ===============================
    PRIVACY POLICY CONTENT
+   MATCH TERMS PAGE
 ================================ */
 
 .policy-main {
     width: 100%;
-    padding: 60px 24px 80px;
-    min-height: 650px;
 }
+
+/* CENTER CONTENT */
 
 .policy-container {
-    width: 75%;
-    max-width: 1000px;
-    margin: 0 auto;
+    width: 60%;
+    max-width: 760px;
+    margin: 90px auto 110px;
 }
-
 
 /* PAGE HEADING */
 
 .page-heading {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 0;
 }
 
 .page-heading h1 {
     font-family: "Nata Sans", sans-serif;
     font-size: 32px;
     font-weight: 900;
-    color: var(--navy);
     text-align: center;
+    color: #222;
 }
 
 .page-heading p {
     font-family: "Plus Jakarta Sans", sans-serif;
-    font-size: 13px;
-    font-weight: 500;
-    color: #777;
     text-align: center;
-    margin-top: 5px;
+    color: #777;
+    font-size: 12px;
+    margin-bottom: 35px;
 }
-
 
 /* PRIVACY POLICY TEXT */
 
 .policy-copy {
     font-family: "Plus Jakarta Sans", sans-serif;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 400;
     line-height: 1.8;
-    color: #333;
+    color: #222;
     text-align: left;
 }
 
-.policy-copy p {
-    margin-bottom: 16px;
+.policy-copy p,
+.policy-copy li {
+    font-size: 14px;
+    line-height: 1.8;
 }
+
+/* INTRODUCTION */
 
 .policy-copy .intro {
-    margin-bottom: 28px;
+    margin-bottom: 20px;
 }
+
+/* CONTENT SECTIONS */
 
 .policy-copy section {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
-
 
 /* SECTION HEADINGS */
 
 .policy-copy h2 {
-    font-family: "Nata Sans", sans-serif;
-    font-size: 18px;
-    font-weight: 900;
-    color: var(--navy);
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+    color: #222;
+    margin-top: 40px;
     margin-bottom: 10px;
 }
-
 
 /* LISTS */
 
@@ -178,15 +175,13 @@ body {
 }
 
 .policy-copy li {
-    margin-bottom: 8px;
-    padding-left: 3px;
+    margin-bottom: 5px;
 }
 
-
-/* CONTACT EMAIL */
+/* CONTACT NOTE */
 
 .contact-note {
-    margin-top: 30px;
+    margin-top: 25px;
 }
 
 .contact-note a {
@@ -202,7 +197,7 @@ body {
 
 /* ===============================
    FOOTER
-   SAME AS CONTACT PAGE
+   MATCH TERMS PAGE
 ================================ */
 
 .site-footer {
@@ -220,7 +215,6 @@ body {
     align-items: flex-start;
 }
 
-
 /* FOOTER LOGO */
 
 .footer-logo img {
@@ -229,7 +223,6 @@ body {
     object-fit: contain;
     display: block;
 }
-
 
 /* FOOTER NAVIGATION */
 
@@ -248,13 +241,9 @@ body {
     text-decoration: none;
 }
 
-
-/* FOOTER HOVER */
-
 .footer-navigation a:hover {
     text-decoration: underline;
 }
-
 
 /* POLICY AREA */
 
@@ -266,7 +255,6 @@ body {
 
 .footer-links {
     display: inline-flex;
-    align-items: center;
     gap: 8px;
 }
 
@@ -283,7 +271,6 @@ body {
     color: white;
 }
 
-
 /* POLICY LINE */
 
 .policy-line {
@@ -293,7 +280,6 @@ body {
     margin-top: 12px;
     margin-left: -10px;
 }
-
 
 /* COPYRIGHT */
 
@@ -340,20 +326,11 @@ body {
         font-size: 12px;
     }
 
-
     /* PRIVACY CONTENT */
-
-    .policy-main {
-        padding: 45px 0 60px;
-        min-height: auto;
-    }
 
     .policy-container {
         width: 88%;
-    }
-
-    .page-heading {
-        margin-bottom: 35px;
+        margin: 45px auto 60px;
     }
 
     .page-heading h1 {
@@ -362,21 +339,22 @@ body {
 
     .page-heading p {
         font-size: 12px;
+        margin-bottom: 30px;
     }
 
     .policy-copy {
-        font-size: 12px;
-        line-height: 1.8;
+        font-size: 13px;
+    }
+
+    .policy-copy p,
+    .policy-copy li {
+        font-size: 13px;
     }
 
     .policy-copy h2 {
-        font-size: 16px;
+        font-size: 18px;
+        margin-top: 30px;
     }
-
-    .policy-copy section {
-        margin-bottom: 22px;
-    }
-
 
     /* FOOTER */
 
@@ -407,34 +385,4 @@ body {
         margin-left: 0;
         width: 100%;
     }
-
-}
-
-
-/* ===============================
-   SMALL MOBILE SCREENS
-================================ */
-
-@media (max-width: 380px) {
-
-    .brand {
-        font-size: 20px;
-    }
-
-    .navigation {
-        gap: 10px 14px;
-    }
-
-    .navigation a {
-        font-size: 11px;
-    }
-
-    .page-heading h1 {
-        font-size: 23px;
-    }
-
-    .policy-copy {
-        font-size: 11px;
-    }
-
 }
