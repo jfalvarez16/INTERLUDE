@@ -1,0 +1,777 @@
+/* ==========================================================
+   INTΞRLUDE — ONE shared stylesheet for every page
+   Link it AFTER Bootstrap:  <link href="css/style.css" rel="stylesheet">
+
+   Brand kit: Navy #1D3353 · Off-white #F9F9F8 · Red #A21F1E
+   Fonts: Nata Sans (logo/headings) · Plus Jakarta Sans (body)
+
+   Sections
+     1. Base + accessibility helpers
+     2. Navbar  (same on every page)
+     3. Footer  (same on every page)
+     4. Home page            (Andrei)
+     5. Product pages        (BJ)
+     6. Contact Us page      (Jenn)
+     7. Privacy Policy page  (Faith)
+     8. Terms of Use page    (Faith)
+   ========================================================== */
+
+
+/* ==========================================================
+   1. BASE + ACCESSIBILITY HELPERS
+   ========================================================== */
+:root {
+  --brand-navy: #1d3353;
+  --brand-offwhite: #f9f9f8;
+  --brand-red: #a21f1e;
+  --brand-red-dark: #861918;
+  --brand-ink: #1a1a1a;
+  --brand-muted: #4b5563;   /* 7.2:1 on off-white */
+  --brand-line: #d9dbe0;
+  --brand-pill: #e6e6e6;
+  --field-border: #6b7280;  /* 4.8:1, visible field edges */
+
+  --font-heading: "Nata Sans", system-ui, sans-serif;
+  --font-body: "Plus Jakarta Sans", system-ui, sans-serif;
+
+  /* Bootstrap overrides */
+  --bs-body-font-family: var(--font-body);
+  --bs-body-font-size: 1rem;          /* 16px minimum body text */
+  --bs-body-line-height: 1.6;
+  --bs-body-color: var(--brand-ink);
+  --bs-body-bg: var(--brand-offwhite);
+  --bs-link-color-rgb: 29, 51, 83;
+  --bs-link-hover-color-rgb: 162, 31, 30;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.brand-wordmark {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  letter-spacing: 0.02em;
+}
+
+/* Skip link (keyboard users) */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -100px;
+  z-index: 2000;
+  padding: 0.75rem 1rem;
+  background: var(--brand-navy);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 0.375rem;
+}
+.skip-link:focus {
+  top: 1rem;
+  color: #fff;
+}
+
+/* Visible focus on everything */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+.btn:focus-visible,
+.form-select:focus-visible,
+.form-control:focus-visible {
+  outline: 3px solid var(--brand-navy);
+  outline-offset: 3px;
+  box-shadow: none;
+}
+/* on red / navy / photo backgrounds the ring turns white so it stays visible */
+.site-header a:focus-visible,
+.site-header button:focus-visible,
+.navbar a:focus-visible,
+.navbar button:focus-visible,
+.site-footer a:focus-visible,
+.hero-section a:focus-visible,
+.about-section a:focus-visible {
+  outline-color: #fff;
+}
+
+
+/* ==========================================================
+   2. NAVBAR — red bar, white text (same on every page)
+   ========================================================== */
+.site-header,
+.navbar {
+  background-color: var(--brand-red) !important;
+}
+.navbar {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+.navbar .navbar-brand,
+.navbar .brand-wordmark {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: 1.75rem;
+  letter-spacing: 0.02em;
+  color: #fff !important;
+  text-decoration: none;
+}
+.navbar .nav-link {
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #fff !important;
+  padding: 0.75rem 1rem !important;   /* ≥44px tap target */
+}
+.navbar .nav-link:hover,
+.navbar .nav-link:focus-visible,
+.navbar .nav-link[aria-current="page"],
+.navbar .nav-link.active {
+  color: #fff !important;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 2px;
+}
+.navbar .navbar-toggler {
+  min-width: 48px;
+  min-height: 48px;
+  border: 2px solid #fff;
+}
+.navbar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23ffffff' stroke-linecap='round' stroke-width='2.5' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+
+/* ==========================================================
+   3. FOOTER — navy (same on every page)
+   ========================================================== */
+.site-footer {
+  background-color: var(--brand-navy);
+  color: #fff;
+  padding: 2rem 1.25rem;
+}
+.footer-mark {
+  width: 88px;
+  height: auto;
+}
+.site-footer a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9375rem;        /* 15px */
+  display: inline-block;
+  min-height: 44px;
+  line-height: 44px;
+}
+.site-footer a:hover {
+  color: #fff;                 /* stays white on hover (navy-on-navy disappeared) */
+  text-decoration: underline;
+}
+.footer-nav a {
+  font-weight: 700;
+  line-height: 32px;
+  min-height: 32px;
+  padding: 6px 0;
+}
+.footer-legal-links a {
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.875rem;
+}
+.footer-rule {
+  border-top: 1px solid rgba(255, 255, 255, 0.7);
+}
+.site-footer small {
+  color: #fff;
+  font-size: 0.8125rem;        /* 13px */
+}
+@media (max-width: 767.98px) {
+  .site-footer {
+    text-align: center;
+  }
+}
+
+
+/* ==========================================================
+   4. HOME PAGE (Andrei) — class names kept from index-style.css
+   ========================================================== */
+/* Hero */
+.hero-section {
+  width: 100%;
+  min-height: clamp(22rem, 38.264vw, 34.4375rem);
+  display: flex;
+  align-items: center;
+  /* even dark shade keeps white text readable over any part of the photo */
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../images/hero-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--brand-offwhite);
+}
+.hero-section h1,
+.hero-section h2,
+.hero-section p {
+  color: var(--brand-offwhite);
+}
+.hero-section h1,
+.hero-section h2 {
+  font-family: var(--font-heading);
+  font-weight: 900;
+}
+.hero-section p {
+  font-size: 1.125rem;
+}
+
+/* Product row */
+.p-display {
+  font-size: 1.25rem;
+  margin-left: 1.5rem;
+}
+.product-row {
+  max-width: 1100px;
+  margin-inline: auto;
+}
+.product-row .card {
+  max-width: 320px;
+  margin-inline: auto;
+  background: transparent;
+  border: 0;
+  color: var(--brand-ink);
+}
+.product-row h3,
+.product-row h5,
+.product-row .card-title {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--brand-ink);
+}
+.view-product,
+.view-product a {
+  color: var(--brand-muted);          /* 7.2:1 (was #717070 = 4.7:1) */
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 5px;
+  display: inline-block;
+  min-height: 44px;
+  line-height: 44px;
+  transition: color 0.2s ease;
+}
+.view-product:hover,
+.view-product a:hover {
+  color: var(--brand-red);
+}
+
+/* About us */
+.about-section {
+  width: 100%;
+  min-height: clamp(22rem, 38.264vw, 34.4375rem);
+  display: flex;
+  align-items: center;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../images/about-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--brand-offwhite);
+}
+.about-container {
+  max-width: 24rem;
+}
+.about-section h2,
+.about-section p {
+  color: var(--brand-offwhite);
+}
+.about-section h2 {
+  font-family: var(--font-heading);
+  font-weight: 900;
+}
+
+@media (min-width: 768px) {
+  .hero-container {
+    margin-left: 5rem;
+  }
+  .about-container {
+    margin-left: 12rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .hero-container,
+  .about-container {
+    padding-inline: 1.25rem;
+  }
+}
+
+
+/* ==========================================================
+   5. PRODUCT PAGES (BJ)
+   ========================================================== */
+.product-media img {
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  display: block;
+  margin-inline: auto;
+}
+.product-title {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: clamp(1.5rem, 2.2vw, 1.875rem);
+  color: var(--brand-ink);
+  margin-bottom: 0;
+}
+.stock-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.875rem;
+  color: var(--brand-muted);
+}
+.stock-status .icon {
+  color: #166534;
+  font-weight: 700;
+}
+.product-price {
+  font-weight: 700;
+  font-size: 1.75rem;
+  color: var(--brand-ink);
+}
+.order-form {
+  max-width: 22rem;
+}
+.order-form .field-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+.order-form .form-label {
+  margin: 0;
+  font-weight: 500;
+  min-width: 4.75rem;
+}
+.size-select {
+  width: auto;
+  min-width: 5.5rem;
+  min-height: 44px;
+  border: 2px solid var(--field-border);
+  font-weight: 700;
+}
+.qty-pill {
+  display: inline-flex;
+  align-items: center;
+  background: var(--brand-pill);
+  border-radius: 999px;
+  padding: 0.125rem;
+}
+.qty-pill .qty-btn {
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--brand-ink);
+}
+.qty-pill .qty-btn:hover:not(:disabled) {
+  background: #d4d4d4;
+}
+.qty-pill .qty-btn:disabled {
+  color: #6b7280;
+  cursor: not-allowed;
+}
+.qty-pill input {
+  width: 3rem;
+  height: 44px;
+  border: 0;
+  background: transparent;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--brand-ink);
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+.qty-pill input::-webkit-outer-spin-button,
+.qty-pill input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.qty-pill input.is-invalid {
+  outline: 3px solid var(--brand-red);
+  border-radius: 0.25rem;
+}
+.btn-order {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--brand-red);
+  --bs-btn-border-color: var(--brand-red);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--brand-red-dark);
+  --bs-btn-hover-border-color: var(--brand-red-dark);
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--brand-red-dark);
+  --bs-btn-active-border-color: var(--brand-red-dark);
+  font-weight: 500;
+  font-size: 1.05rem;
+  min-height: 48px;
+  border-radius: 0.25rem;
+}
+.order-total {
+  font-weight: 700;
+}
+.form-hint {
+  color: var(--brand-muted);
+  font-size: 0.875rem;
+}
+.order-status {
+  border-left: 4px solid var(--brand-navy);
+  background: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 0.25rem;
+  font-size: 0.95rem;
+}
+.order-status.is-error {
+  border-left-color: var(--brand-red);
+  color: var(--brand-red);
+  font-weight: 700;
+}
+.product-description {
+  max-width: 34rem;
+  color: var(--brand-muted);
+}
+.product-description h2 {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--brand-muted);
+  margin-bottom: 0.5rem;
+}
+.section-label {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: var(--brand-ink);
+}
+.similar-card {
+  background: transparent;
+  border: 0;
+}
+.similar-card img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+.similar-card .card-title {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--brand-ink);
+}
+.similar-card .price {
+  font-weight: 700;
+}
+.similar-card .view-link {
+  color: var(--brand-muted);
+  display: inline-block;
+  padding: 0.5rem 0;
+  min-height: 44px;
+  text-underline-offset: 3px;
+}
+.similar-card .view-link:hover {
+  color: var(--brand-red);
+}
+
+
+/* ==========================================================
+   6. CONTACT US PAGE (Jenn) — class names kept from contact.css
+   ========================================================== */
+.contact-section {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 3rem 1.25rem 4rem;
+}
+.contact-heading {
+  text-align: center;
+  margin-bottom: 2.75rem;
+}
+.contact-heading h1 {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: clamp(1.75rem, 3vw, 2rem);
+  color: var(--brand-ink);
+  margin-bottom: 0.25rem;
+}
+.contact-heading p {
+  font-size: 1rem;
+  color: var(--brand-muted);
+  margin: 0;
+}
+.contact-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2.5rem;
+}
+.contact-form h2 {
+  font-size: 1.3125rem;
+  font-weight: 700;
+  color: var(--brand-ink);
+  margin-bottom: 1.25rem;
+}
+.form-group {
+  margin-bottom: 1.5rem;
+}
+.form-group label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.35rem;
+}
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  border: 2px solid var(--field-border);   /* was #d5dce3 = 1.4:1, too faint */
+  border-radius: 3px;
+  background: #fff;
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--brand-ink);
+}
+.form-group input {
+  min-height: 48px;
+}
+.form-group textarea {
+  min-height: 8rem;
+  resize: vertical;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--brand-navy);
+  outline: 3px solid var(--brand-navy);
+  outline-offset: 2px;
+}
+.form-group input[aria-invalid="true"],
+.form-group textarea[aria-invalid="true"],
+.form-group .is-invalid {
+  border-color: var(--brand-red);
+}
+.form-error,
+.form-group .invalid-feedback {
+  display: block;
+  color: var(--brand-red);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  margin-top: 0.35rem;
+}
+.submit-button {
+  background-color: var(--brand-red);
+  color: #fff;
+  border: 0;
+  border-radius: 4px;
+  padding: 0.75rem 2.25rem;
+  min-height: 48px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.submit-button:hover {
+  background-color: var(--brand-red-dark);
+}
+.contact-information {
+  padding-top: 0;
+}
+.info-row {
+  display: grid;
+  grid-template-columns: 90px minmax(0, 1fr);
+  gap: 0.625rem;
+  margin-bottom: 1.125rem;
+  font-size: 1rem;
+}
+.info-row strong {
+  font-weight: 700;
+}
+.info-row a {
+  overflow-wrap: anywhere;
+}
+.location-heading {
+  font-size: 1.3125rem;
+  font-weight: 700;
+  margin: 1.25rem 0 1rem;
+}
+.store-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.25rem;
+}
+.address {
+  color: var(--brand-muted);          /* 7.2:1 (was #66717e = 4.7:1) */
+  font-size: 0.9375rem;               /* 15px (was 14px) */
+  line-height: 1.6;
+  margin-top: 0.5rem;
+}
+@media (max-width: 767.98px) {
+  .contact-section {
+    padding: 2.25rem 1.25rem;
+  }
+  .contact-heading {
+    margin-bottom: 2rem;
+  }
+  .contact-container {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2.25rem;
+  }
+}
+
+
+/* ==========================================================
+   7. PRIVACY POLICY PAGE (Faith) — class names kept from privacy.css
+   ========================================================== */
+.policy-main {
+  padding: 3.5rem 1.25rem 4.5rem;
+}
+.policy-container {
+  width: min(100%, 760px);       /* ~70 characters per line */
+  margin: 0 auto;
+}
+.page-heading {
+  text-align: center;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--brand-line);
+  margin-bottom: 2rem;
+}
+.page-heading h1 {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  line-height: 1.2;
+  color: var(--brand-ink);
+  margin: 0 0 0.375rem;
+}
+.page-heading p {
+  margin: 0;
+  font-size: 0.9375rem;          /* 15px (was 13px, 10px on mobile) */
+  color: var(--brand-muted);
+}
+.policy-copy {
+  font-size: 1.0625rem;          /* 17px (was 13px, 10px on mobile) */
+  line-height: 1.75;
+}
+.policy-copy p {
+  margin: 0 0 1rem;
+}
+.policy-copy .intro {
+  margin-bottom: 1.75rem;
+}
+.policy-copy section {
+  margin: 0 0 1.75rem;
+}
+.policy-copy h2 {
+  font-size: 1.25rem;            /* 20px (was 15px, 12px on mobile) */
+  line-height: 1.35;
+  font-weight: 700;
+  color: var(--brand-navy);
+  margin: 0 0 0.5rem;
+  scroll-margin-top: 1rem;
+}
+.policy-copy ul {
+  margin: 0 0 1rem;
+  padding-left: 1.5rem;
+}
+.policy-copy li {
+  margin-bottom: 0.4rem;
+}
+.policy-copy .contact-note {
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+.contact-note a,
+.policy-copy a {
+  color: var(--brand-navy);
+  font-weight: 700;
+  text-decoration: underline;    /* links shown by more than color */
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+}
+
+
+/* ==========================================================
+   8. TERMS OF USE PAGE (Faith) — class names kept from terms.css
+   ========================================================== */
+.terms {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 4.5rem 1.25rem 5.5rem;
+}
+.terms h1 {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  text-align: center;
+  color: var(--brand-ink);
+  margin-bottom: 0.25rem;
+}
+.terms .updated,
+.updated {
+  text-align: center;
+  color: var(--brand-muted);     /* 7.2:1 (was #777 = 4.25:1, fails) */
+  font-size: 0.9375rem;          /* 15px (was 12px) */
+  margin-bottom: 2.5rem;
+}
+.terms h2 {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1.3125rem;
+  color: var(--brand-navy);
+  margin: 2.5rem 0 0.75rem;
+  scroll-margin-top: 1rem;
+}
+.terms h3 {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: var(--brand-navy);
+  margin: 1.75rem 0 0.5rem;
+}
+.terms p,
+.terms li {
+  font-size: 1.0625rem;          /* 17px (was 14px) */
+  line-height: 1.8;
+}
+.terms p {
+  margin-bottom: 1rem;
+}
+.terms ul,
+.terms ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+.terms li {
+  margin-bottom: 0.5rem;
+}
+.terms a {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+
+/* ==========================================================
+   Respect reduced-motion settings
+   ========================================================== */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
