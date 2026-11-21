@@ -61,6 +61,15 @@ h5 {
 	background-repeat: no-repeat;
 }
 
+.hero-section h1, 
+.hero-section p {
+	text-shadow: 0 0 10px #1D3353;
+}
+
+.hero-section p {
+	max-width: 18rem;
+}
+
 /* === Product Display === */
 .p-display {
 	font-size: 1.25rem;
