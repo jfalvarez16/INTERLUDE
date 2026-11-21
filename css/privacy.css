@@ -1,26 +1,7 @@
 
-/* GOOGLE FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Nata+Sans:wght@900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
-
-/* ===============================
-   INTΞRLUDE PRIVACY PAGE
-================================ */
-
-/* COLORS */
-
-:root {
-    --navy: #1D3353;
-    --off-white: #F9F9F8;
-    --red: #A21F1E;
-    --grey-200: #D1D5DB;
-}
-
-
-/* ===============================
-   GENERAL
-================================ */
-
+/* GENERAL */
 * {
     margin: 0;
     padding: 0;
@@ -28,21 +9,17 @@
 }
 
 body {
-    font-family: "Plus Jakarta Sans", sans-serif;
-    background-color: var(--off-white);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #F9F9F8;
     color: #222;
     line-height: 1.6;
 }
 
-
-/* ===============================
-   HEADER
-   MATCH TERMS PAGE
-================================ */
-
+/* HEADER */
 .site-header {
-    background-color: var(--red);
+    background-color: #A21F1E;
     height: 70px;
+    width: 100%;
 }
 
 .header-container {
@@ -50,34 +27,30 @@ body {
     max-width: 1200px;
     height: 100%;
     margin: auto;
-
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 }
 
-/* HEADER LOGO */
-
 .brand {
-    font-family: "Nata Sans", sans-serif;
+    font-family: 'Nata Sans', sans-serif;
     font-size: 24px;
     font-weight: 900;
-    color: white;
+    color: #FFFFFF;
     text-decoration: none;
 }
 
-/* HEADER NAVIGATION */
-
 .navigation {
     display: flex;
+    align-items: center;
     gap: 42px;
 }
 
 .navigation a {
-    font-family: "Nata Sans", sans-serif;
+    font-family: 'Nata Sans', sans-serif;
     font-size: 18px;
     font-weight: 900;
-    color: white;
+    color: #FFFFFF;
     text-decoration: none;
     text-transform: uppercase;
 }
@@ -86,17 +59,10 @@ body {
     opacity: 0.8;
 }
 
-
-/* ===============================
-   PRIVACY POLICY CONTENT
-   MATCH TERMS PAGE
-================================ */
-
+/* PRIVACY POLICY CONTENT */
 .policy-main {
     width: 100%;
 }
-
-/* CENTER CONTENT */
 
 .policy-container {
     width: 60%;
@@ -104,127 +70,79 @@ body {
     margin: 90px auto 110px;
 }
 
-/* PAGE HEADING */
-
+/* CENTERED PAGE HEADING */
 .page-heading {
+    width: 100%;
     text-align: center;
-    margin-bottom: 0;
-}
-
-.page-heading h1 {
-    font-family: "Nata Sans", sans-serif;
-    font-size: 32px;
-    font-weight: 900;
-    text-align: center;
-    color: #222;
-}
-
-.page-heading p {
-    font-family: "Plus Jakarta Sans", sans-serif;
-    text-align: center;
-    color: #777;
-    font-size: 12px;
     margin-bottom: 35px;
 }
 
-/* PRIVACY POLICY TEXT */
+.page-heading h1 {
+    font-family: 'Nata Sans', sans-serif;
+    font-size: 32px;
+    font-weight: 900;
+    text-align: center;
+    margin: 0 auto;
+}
 
-.policy-copy {
-    font-family: "Plus Jakarta Sans", sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.8;
-    color: #222;
-    text-align: left;
+.page-heading p {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 12px;
+    color: #777777;
+    text-align: center;
+    margin-top: 8px;
+}
+
+/* PRIVACY POLICY TEXT */
+.policy-copy h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+    margin-top: 40px;
+    margin-bottom: 12px;
 }
 
 .policy-copy p,
 .policy-copy li {
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 14px;
     line-height: 1.8;
+    margin-bottom: 15px;
 }
-
-/* INTRODUCTION */
-
-.policy-copy .intro {
-    margin-bottom: 20px;
-}
-
-/* CONTENT SECTIONS */
-
-.policy-copy section {
-    margin-bottom: 20px;
-}
-
-/* SECTION HEADINGS */
-
-.policy-copy h2 {
-    font-family: "Plus Jakarta Sans", sans-serif;
-    font-size: 21px;
-    font-weight: 700;
-    color: #222;
-    margin-top: 40px;
-    margin-bottom: 10px;
-}
-
-/* LISTS */
 
 .policy-copy ul {
     padding-left: 25px;
     margin-bottom: 15px;
 }
 
-.policy-copy li {
-    margin-bottom: 5px;
+.policy-copy a {
+    color: #A21F1E;
+    text-decoration: none;
 }
 
-/* CONTACT NOTE */
-
-.contact-note {
-    margin-top: 25px;
-}
-
-.contact-note a {
-    color: var(--red);
-    font-weight: 700;
+.policy-copy a:hover {
     text-decoration: underline;
 }
 
-.contact-note a:hover {
-    opacity: 0.8;
-}
-
-
-/* ===============================
-   FOOTER
-   MATCH TERMS PAGE
-================================ */
-
+/* FOOTER */
 .site-footer {
-    background-color: var(--navy);
+    background-color: #1D3353;
     padding: 45px 0;
-    color: white;
 }
 
 .footer-container {
     width: 90%;
     max-width: 1200px;
     margin: auto;
-
     display: flex;
     align-items: flex-start;
 }
-
-/* FOOTER LOGO */
 
 .footer-logo img {
     width: 120px;
     height: 120px;
     object-fit: contain;
-    display: block;
 }
-
-/* FOOTER NAVIGATION */
 
 .footer-navigation {
     display: flex;
@@ -234,82 +152,70 @@ body {
 }
 
 .footer-navigation a {
-    font-family: "Nata Sans", sans-serif;
+    font-family: 'Nata Sans', sans-serif;
     font-size: 14px;
     font-weight: 700;
-    color: white;
+    color: #FFFFFF;
     text-decoration: none;
 }
 
 .footer-navigation a:hover {
-    text-decoration: underline;
+    opacity: 0.8;
 }
-
-/* POLICY AREA */
 
 .footer-information {
     margin-left: auto;
-    text-align: right;
     padding-top: 8px;
+    text-align: right;
 }
 
 .footer-links {
     display: inline-flex;
+    align-items: center;
     gap: 8px;
 }
 
 .footer-links a,
 .footer-links span {
-    font-family: "Nata Sans", sans-serif;
-    color: var(--grey-200);
+    font-family: 'Nata Sans', sans-serif;
     font-size: 12px;
     font-weight: 700;
+    color: #D1D5DB;
     text-decoration: none;
 }
 
 .footer-links a:hover {
-    color: white;
+    color: #FFFFFF;
 }
 
-/* POLICY LINE */
-
 .policy-line {
-    height: 1px;
-    background-color: var(--grey-200);
     width: calc(100% + 20px);
+    height: 1px;
+    background-color: #D1D5DB;
     margin-top: 12px;
     margin-left: -10px;
 }
 
-/* COPYRIGHT */
-
 .footer-information p {
-    font-family: "Nata Sans", sans-serif;
-    color: var(--grey-200);
+    font-family: 'Nata Sans', sans-serif;
     font-size: 10px;
     font-weight: 700;
+    color: #D1D5DB;
     margin-top: 10px;
 }
 
-
-/* ===============================
-   MOBILE RESPONSIVENESS
-================================ */
-
-@media (max-width: 768px) {
+/* MOBILE RESPONSIVENESS */
+@media screen and (max-width: 768px) {
 
     /* HEADER */
-
     .site-header {
         height: auto;
-        min-height: 70px;
+        padding: 18px 0;
     }
 
     .header-container {
-        width: 90%;
-        padding: 12px 0;
         flex-direction: column;
-        gap: 12px;
+        gap: 15px;
     }
 
     .brand {
@@ -326,24 +232,28 @@ body {
         font-size: 12px;
     }
 
-    /* PRIVACY CONTENT */
-
+    /* PRIVACY POLICY CONTENT */
     .policy-container {
         width: 88%;
         margin: 45px auto 60px;
     }
 
+    .page-heading {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
     .page-heading h1 {
         font-size: 26px;
+        text-align: center;
     }
 
     .page-heading p {
         font-size: 12px;
-        margin-bottom: 30px;
     }
 
-    .policy-copy {
-        font-size: 13px;
+    .policy-copy h2 {
+        font-size: 18px;
     }
 
     .policy-copy p,
@@ -351,13 +261,7 @@ body {
         font-size: 13px;
     }
 
-    .policy-copy h2 {
-        font-size: 18px;
-        margin-top: 30px;
-    }
-
     /* FOOTER */
-
     .footer-container {
         flex-direction: column;
         gap: 30px;
@@ -377,12 +281,7 @@ body {
         text-align: left;
     }
 
-    .footer-links {
-        flex-wrap: wrap;
-    }
-
     .policy-line {
         margin-left: 0;
-        width: 100%;
     }
 }
