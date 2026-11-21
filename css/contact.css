@@ -239,6 +239,7 @@ h1, h2 {
     width: 4rem;
     height: 3.5rem;
     object-fit: contain;
+    display: block;
 }
 
 /* FOOTER NAVIGATION */
@@ -299,10 +300,6 @@ h1, h2 {
 ========================= */
 
 @media (min-width: 768px) {
-
-    .contact-section {
-        padding: 45px 20px 40px;
-    }
 
     .site-footer {
         padding-block: 2.5rem;
@@ -374,7 +371,12 @@ h1, h2 {
     .footer-container {
         flex-direction: column;
         text-align: center;
-        gap: 22px;
+        gap: 2rem;
+    }
+
+    .footer-logo img {
+        width: 4rem;
+        height: 3.5rem;
     }
 
     .footer-navigation {
