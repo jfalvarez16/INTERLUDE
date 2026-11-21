@@ -61,6 +61,10 @@ h5 {
 	background-repeat: no-repeat;
 }
 
+.hero-section p {
+	color: #F9F9F8;
+}
+
 /* === Product Display === */
 .p-display {
 	font-size: 1.25rem;
