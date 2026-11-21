@@ -1,7 +1,13 @@
 
-/* ========================================
-   GENERAL SETTINGS
-======================================== */
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Nata+Sans:wght@900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+
+/* ===============================
+   INTΞRLUDE PRIVACY PAGE
+================================ */
+
+/* COLORS */
 
 :root {
     --navy: #1D3353;
@@ -10,6 +16,9 @@
     --grey-200: #D1D5DB;
 }
 
+
+/* GENERAL */
+
 * {
     margin: 0;
     padding: 0;
@@ -17,101 +26,108 @@
 }
 
 body {
+    font-family: "Plus Jakarta Sans", sans-serif;
     background-color: var(--off-white);
-    color: var(--navy);
-    font-family: 'Nata Sans', sans-serif;
+    color: #222;
+    line-height: 1.6;
 }
 
 
-/* ========================================
-   HEADER / NAVIGATION BAR
-   SAME STYLE AS CONTACT PAGE
-======================================== */
+/* ===============================
+   HEADER
+   SAME AS CONTACT PAGE
+================================ */
 
-header {
+.site-header {
     background-color: var(--red);
     height: 70px;
-    width: 100%;
 }
 
-.nav-container {
+.header-container {
     width: 90%;
     max-width: 1200px;
     height: 100%;
     margin: auto;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.logo {
-    font-family: 'Nata Sans', sans-serif;
+/* HEADER LOGO */
+
+.brand {
+    font-family: "Nata Sans", sans-serif;
     font-size: 24px;
     font-weight: 900;
     color: white;
     text-decoration: none;
 }
 
-header nav {
+/* HEADER NAVIGATION */
+
+.navigation {
     display: flex;
-    align-items: center;
     gap: 42px;
 }
 
-header nav a {
-    font-family: 'Nata Sans', sans-serif;
+.navigation a {
+    font-family: "Nata Sans", sans-serif;
     font-size: 18px;
     font-weight: 900;
     color: white;
     text-decoration: none;
     text-transform: uppercase;
-    transition: opacity 0.3s ease;
 }
 
-header nav a:hover {
-    opacity: 0.75;
+/* HEADER HOVER */
+
+.navigation a:hover {
+    opacity: 0.8;
 }
 
 
-/* ========================================
-   PRIVACY POLICY MAIN CONTENT
-======================================== */
+/* ===============================
+   PRIVACY POLICY CONTENT
+================================ */
 
 .policy-main {
     width: 100%;
-    min-height: 662px;
-    padding: 49px 24px 48px;
+    padding: 60px 24px 80px;
+    min-height: 650px;
 }
 
 .policy-container {
-    width: 100%;
-    max-width: 650px;
-    margin: 0 auto;
+    width: 75%;
+    max-width: 1000px;
+    margin: auto;
 }
 
+/* PAGE HEADING */
+
 .page-heading {
-    margin-bottom: 28px;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 .page-heading h1 {
-    font-size: 28px;
+    font-family: "Nata Sans", sans-serif;
+    font-size: 32px;
     font-weight: 900;
     color: var(--navy);
-    margin-bottom: 8px;
 }
 
 .page-heading p {
-    font-size: 12px;
-    font-weight: 500;
+    font-size: 13px;
     color: #777;
+    margin-top: 5px;
 }
+
+/* PRIVACY POLICY TEXT */
 
 .policy-copy {
     font-size: 13px;
     line-height: 1.8;
-    font-weight: 400;
-    color: var(--navy);
+    color: #333;
 }
 
 .policy-copy p {
@@ -119,32 +135,38 @@ header nav a:hover {
 }
 
 .policy-copy .intro {
-    margin-bottom: 25px;
+    margin-bottom: 28px;
 }
 
 .policy-copy section {
-    margin-bottom: 23px;
+    margin-bottom: 25px;
 }
 
+/* SECTION HEADINGS */
+
 .policy-copy h2 {
-    font-size: 16px;
-    font-weight: 900;
+    font-size: 18px;
+    font-weight: 800;
     color: var(--navy);
     margin-bottom: 10px;
 }
 
+/* LISTS */
+
 .policy-copy ul {
-    padding-left: 22px;
+    padding-left: 25px;
     margin-bottom: 15px;
 }
 
 .policy-copy li {
-    margin-bottom: 7px;
+    margin-bottom: 8px;
     padding-left: 3px;
 }
 
+/* CONTACT EMAIL */
+
 .contact-note {
-    margin-top: 25px;
+    margin-top: 30px;
 }
 
 .contact-note a {
@@ -154,36 +176,30 @@ header nav a:hover {
 }
 
 .contact-note a:hover {
-    opacity: 0.75;
+    opacity: 0.8;
 }
 
 
-/* ========================================
+/* ===============================
    FOOTER
-   SAME STYLE AS CONTACT PAGE
-======================================== */
+   SAME AS CONTACT PAGE
+================================ */
 
-footer {
+.site-footer {
     background-color: var(--navy);
     padding: 45px 0;
-    width: 100%;
+    color: white;
 }
 
 .footer-container {
     width: 90%;
     max-width: 1200px;
     margin: auto;
-
     display: flex;
     align-items: flex-start;
 }
 
 /* FOOTER LOGO */
-
-.footer-logo {
-    display: block;
-    flex-shrink: 0;
-}
 
 .footer-logo img {
     width: 120px;
@@ -194,164 +210,143 @@ footer {
 
 /* FOOTER NAVIGATION */
 
-.footer-links {
+.footer-navigation {
     display: flex;
     flex-direction: column;
     gap: 8px;
     margin-left: 180px;
 }
 
-.footer-links a {
-    font-family: 'Nata Sans', sans-serif;
+.footer-navigation a {
+    font-family: "Nata Sans", sans-serif;
     font-size: 14px;
     font-weight: 700;
     color: white;
     text-decoration: none;
-    transition: opacity 0.3s ease;
 }
 
-.footer-links a:hover {
-    opacity: 0.7;
+/* FOOTER HOVER */
+
+.footer-navigation a:hover {
+    text-decoration: underline;
 }
 
-/* PRIVACY AND TERMS LINKS */
+/* POLICY AREA */
 
-.footer-policy {
+.footer-information {
     margin-left: auto;
     text-align: right;
     padding-top: 8px;
 }
 
-.policy-links {
+.footer-links {
     display: inline-flex;
-    align-items: center;
     gap: 8px;
 }
 
-.policy-links a,
-.policy-links span {
-    font-family: 'Nata Sans', sans-serif;
+.footer-links a,
+.footer-links span {
+    font-family: "Nata Sans", sans-serif;
+    color: var(--grey-200);
     font-size: 12px;
     font-weight: 700;
-    color: var(--grey-200);
     text-decoration: none;
 }
 
-.policy-links a:hover {
+.footer-links a:hover {
     color: white;
 }
 
+/* THE LINE */
+
 .policy-line {
     height: 1px;
-    width: calc(100% + 20px);
     background-color: var(--grey-200);
+    width: calc(100% + 20px);
     margin-top: 12px;
     margin-left: -10px;
 }
 
-.footer-policy p {
-    font-family: 'Nata Sans', sans-serif;
+/* COPYRIGHT */
+
+.footer-information p {
+    font-family: "Nata Sans", sans-serif;
+    color: var(--grey-200);
     font-size: 10px;
     font-weight: 700;
-    color: var(--grey-200);
     margin-top: 10px;
 }
 
 
-/* ========================================
-   TABLET RESPONSIVENESS
-======================================== */
-
-@media (max-width: 1024px) {
-
-    .footer-links {
-        margin-left: 100px;
-    }
-
-    header nav {
-        gap: 25px;
-    }
-
-    header nav a {
-        font-size: 16px;
-    }
-
-}
-
-
-/* ========================================
+/* ===============================
    MOBILE RESPONSIVENESS
-======================================== */
+================================ */
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 
     /* HEADER */
 
-    header {
+    .site-header {
         height: auto;
         min-height: 70px;
     }
 
-    .nav-container {
+    .header-container {
         width: 90%;
-        min-height: 70px;
-        flex-wrap: wrap;
-        gap: 12px;
-        padding: 15px 0;
-    }
-
-    .logo {
-        font-size: 21px;
-    }
-
-    header nav {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
+        padding: 12px 0;
+        flex-direction: column;
         gap: 12px;
     }
 
-    header nav a {
+    .brand {
+        font-size: 22px;
+    }
+
+    .navigation {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 20px;
+    }
+
+    .navigation a {
         font-size: 12px;
     }
-
 
     /* PRIVACY CONTENT */
 
     .policy-main {
+        padding: 45px 0 60px;
         min-height: auto;
-        padding: 40px 22px;
+    }
+
+    .policy-container {
+        width: 88%;
+    }
+
+    .page-heading {
+        margin-bottom: 35px;
     }
 
     .page-heading h1 {
-        font-size: 23px;
+        font-size: 26px;
     }
 
     .page-heading p {
-        font-size: 11px;
+        font-size: 12px;
     }
 
     .policy-copy {
         font-size: 12px;
-        line-height: 1.8;
     }
 
     .policy-copy h2 {
-        font-size: 15px;
+        font-size: 16px;
     }
-
 
     /* FOOTER */
 
-    footer {
-        padding: 35px 0;
-    }
-
     .footer-container {
-        width: 90%;
         flex-direction: column;
-        align-items: flex-start;
         gap: 30px;
     }
 
@@ -360,58 +355,21 @@ footer {
         height: 100px;
     }
 
-    .footer-links {
+    .footer-navigation {
         margin-left: 0;
     }
 
-    .footer-policy {
+    .footer-information {
         margin-left: 0;
         text-align: left;
-        padding-top: 0;
-        width: 100%;
     }
 
-    .policy-links {
+    .footer-links {
         flex-wrap: wrap;
     }
 
     .policy-line {
-        width: 100%;
         margin-left: 0;
+        width: 100%;
     }
-
-    .footer-policy p {
-        font-size: 10px;
-    }
-
-}
-
-
-/* ========================================
-   SMALL MOBILE SCREENS
-======================================== */
-
-@media (max-width: 380px) {
-
-    .logo {
-        font-size: 19px;
-    }
-
-    header nav {
-        gap: 9px;
-    }
-
-    header nav a {
-        font-size: 10px;
-    }
-
-    .page-heading h1 {
-        font-size: 21px;
-    }
-
-    .policy-links a,
-    .policy-links span {
-        font-size: 10px;
-    }
-
 }
