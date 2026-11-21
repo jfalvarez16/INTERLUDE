@@ -198,13 +198,19 @@ footer {
 
 @media (max-width: 768px) {
 
-  .nav-container {
-     width: 90%;
-        height: auto;
-        padding: 12px 0;
+   .nav-container {
         flex-direction: column;
-        gap: 12px;
-  }
+        justify-content: center;
+        gap: 1rem;
+        padding-block: 1rem;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
    
     .footer-container {
         flex-direction: column;
