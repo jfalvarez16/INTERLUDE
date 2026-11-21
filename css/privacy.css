@@ -1,4 +1,5 @@
 
+/* GOOGLE FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Nata+Sans:wght@900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
 /* =========================
@@ -22,9 +23,10 @@ html {
 
 body {
     margin: 0;
+    padding: 0;
     color: var(--text);
     background: #fff;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Plus Jakarta Sans', Arial, sans-serif;
 }
 
 /* =========================
@@ -32,56 +34,62 @@ body {
 ========================= */
 
 .site-header {
-    height: 53px;
+    width: 100%;
+    min-height: 72px;
     background: var(--brand-red);
     color: #fff;
     position: relative;
 }
 
 .header-inner {
-    width: min(100% - 48px, 608px);
-    height: 100%;
+    width: 100%;
+    max-width: 1250px;
+    min-height: 72px;
     margin: 0 auto;
+    padding: 0 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-/* NATA SANS HEADER FONT */
+/* LOGO */
+
 .wordmark {
     color: #fff;
     font-family: 'Nata Sans', sans-serif;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 23px;
     font-weight: 900;
-    letter-spacing: -1px;
 }
+
+/* HEADER NAVIGATION */
 
 .main-nav {
     display: flex;
     align-items: center;
-    gap: 29px;
+    gap: 20px;
 }
 
 .main-nav a {
     color: #fff;
-    font-family: 'Nata Sans', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     text-decoration: none;
-    font-size: 9px;
-    font-weight: 900;
+    font-size: 16px;
+    font-weight: 800;
 }
 
-.main-nav a:hover,
-.footer-nav a:hover,
-.footer-legal-links a:hover {
+.main-nav a:hover {
     text-decoration: underline;
 }
+
+/* MOBILE MENU BUTTON */
 
 .menu-toggle {
     display: none;
     border: 0;
     background: transparent;
     padding: 7px;
+    cursor: pointer;
 }
 
 .menu-toggle span {
@@ -182,29 +190,29 @@ body {
 
 .site-footer {
     width: 100%;
-    min-height: 177px;
+    min-height: 150px;
     background: var(--footer-navy);
     color: #fff;
 }
 
 .footer-inner {
-    width: min(100% - 80px, 1280px);
-    min-height: 177px;
+    width: 100%;
+    max-width: 1250px;
+    min-height: 150px;
     margin: 0 auto;
-    padding-top: 24px;
-
+    padding: 25px 20px;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
 }
 
-/* LOGO */
+/* FOOTER LOGO */
 
 .equalizer-logo {
     display: inline-flex;
     align-items: center;
-    width: 115px;
-    margin-top: 23px;
+    width: 110px;
+    margin-top: 0;
     text-decoration: none;
 }
 
@@ -220,30 +228,35 @@ body {
 .footer-nav {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 6px;
     margin: 0;
 }
 
 .footer-nav a {
     color: #fff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
     text-decoration: none;
-    font-size: 13px;
-    font-weight: 700;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
 }
 
 /* PRIVACY POLICY AND TERMS LINKS */
 
 .footer-legal {
-    width: 225px;
-    margin-top: 6px;
-    text-align: left;
+    width: auto;
+    margin-top: 0;
+    text-align: right;
 }
 
 .footer-legal-links {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 8px;
+    justify-content: flex-end;
+    gap: 10px;
     padding-bottom: 12px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.65);
 }
@@ -252,14 +265,18 @@ body {
 .footer-legal-links span {
     color: #fff;
     text-decoration: none;
-    font-size: 11px;
+    font-size: 14px;
     font-weight: 700;
     white-space: nowrap;
 }
 
+.footer-legal-links a:hover {
+    text-decoration: underline;
+}
+
 .footer-legal p {
-    margin: 12px 0 0;
-    font-size: 9px;
+    margin: 20px 0 0;
+    font-size: 13px;
     font-weight: 600;
     color: rgba(255, 255, 255, 0.9);
 }
@@ -270,26 +287,30 @@ body {
 
 @media (max-width: 767px) {
 
-    /* Header */
+    /* HEADER */
+
+    .site-header {
+        min-height: 72px;
+    }
 
     .header-inner {
-        width: calc(100% - 36px);
+        width: calc(100% - 30px);
+        min-height: 72px;
     }
 
     .wordmark {
-        font-size: 17px;
+        font-size: 23px;
     }
 
     .menu-toggle {
         display: block;
-        cursor: pointer;
     }
 
     .main-nav {
         display: none;
         position: absolute;
         z-index: 5;
-        top: 53px;
+        top: 72px;
         left: 0;
         right: 0;
         padding: 18px;
@@ -303,10 +324,10 @@ body {
     }
 
     .main-nav a {
-        font-size: 11px;
+        font-size: 16px;
     }
 
-    /* Privacy Policy Content */
+    /* PRIVACY POLICY CONTENT */
 
     .policy-main {
         min-height: auto;
@@ -341,92 +362,51 @@ body {
         margin-top: 30px;
     }
 
-    /* Footer */
+    /* FOOTER */
 
     .footer-inner {
-        width: calc(100% - 40px);
-        min-height: 125px;
-        padding: 25px 0;
-        gap: 18px;
+        width: 100%;
+        min-height: auto;
+        padding: 25px 20px;
+        flex-direction: column;
         align-items: center;
+        text-align: center;
+        gap: 22px;
     }
 
     .equalizer-logo {
-        width: 65px;
+        width: 110px;
         margin-top: 0;
     }
 
     .footer-nav {
-        gap: 8px;
+        align-items: center;
+        gap: 6px;
     }
 
     .footer-nav a {
-        font-size: 10px;
+        font-size: 15px;
     }
 
     .footer-legal {
-        width: 155px;
+        width: auto;
         margin-top: 0;
+        text-align: center;
     }
 
     .footer-legal-links {
-        gap: 5px;
-        padding-bottom: 8px;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
     }
 
     .footer-legal-links a,
     .footer-legal-links span {
-        font-size: 7px;
+        font-size: 14px;
     }
 
     .footer-legal p {
-        font-size: 7px;
-    }
-}
-
-/* =========================
-   SMALL MOBILE SCREENS
-========================= */
-
-@media (max-width: 400px) {
-
-    .footer-inner {
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-
-    .footer-legal {
-        width: 100%;
-    }
-}
-
-/* =========================
-   DESKTOP LAYOUT
-========================= */
-
-@media (min-width: 768px) {
-
-    .header-inner {
-        width: min(100% - 80px, 1100px);
-    }
-
-    .main-nav {
-        display: flex;
-        position: static;
-        flex-direction: row;
-        gap: 29px;
-        padding: 0;
-    }
-
-    .menu-toggle {
-        display: none;
-    }
-
-    .policy-container {
-        width: min(100%, 650px);
-    }
-
-    .footer-inner {
-        width: min(100% - 80px, 1280px);
+        font-size: 13px;
+        margin-top: 20px;
     }
 }
