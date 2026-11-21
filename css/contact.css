@@ -1,14 +1,8 @@
 
-/* =========================
-   GOOGLE FONTS
-========================= */
-
+/* GOOGLE FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Nata+Sans:wght@600;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
-/* =========================
-   GENERAL STYLES
-========================= */
-
+/* GENERAL */
 * {
     box-sizing: border-box;
 }
@@ -16,54 +10,47 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Plus Jakarta Sans', 'Roboto', sans-serif;
-    color: #222;
-    background-color: #F9F9F8;
+    font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+    color: #171717;
+    background-color: #ffffff;
 }
 
-h1, h2 {
-    font-family: 'Nata Sans', 'Inter', sans-serif;
-    font-weight: 900;
-}
-
-/* =========================
-   HEADER / NAVIGATION
-========================= */
-
+/* HEADER */
 .site-header {
     width: 100%;
-    min-height: 72px;
-    background-color: #F9F9F8;
+    background-color: #a51f26;
 }
 
 .header-container {
     max-width: 1250px;
-    min-height: 72px;
+    min-height: 56px;
     margin: auto;
-    padding: 0 20px;
+    padding: 0 9.5%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
+/* BRAND */
 .brand {
-    color: #1D3353;
+    color: #ffffff;
     font-family: 'Nata Sans', sans-serif;
-    font-size: 23px;
+    font-size: 20px;
     font-weight: 900;
     text-decoration: none;
 }
 
+/* NAVIGATION */
 .navigation {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
 }
 
 .navigation a {
-    color: #1D3353;
+    color: #ffffff;
     font-family: 'Nata Sans', sans-serif;
-    font-size: 16px;
+    font-size: 11px;
     font-weight: 900;
     text-decoration: none;
 }
@@ -72,97 +59,95 @@ h1, h2 {
     text-decoration: underline;
 }
 
-/* =========================
-   CONTACT SECTION
-========================= */
-
+/* CONTACT SECTION */
 .contact-section {
-    max-width: 1050px;
+    max-width: 850px;
+    min-height: 578px;
     margin: auto;
-    padding: 45px 20px 40px;
+    padding: 52px 12.5% 65px;
 }
 
 /* HEADING */
-
 .contact-heading {
     text-align: center;
-    margin-bottom: 45px;
+    margin-bottom: 42px;
 }
 
 .contact-heading h1 {
-    font-size: 30px;
-    font-weight: 900;
-    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 800;
+    margin: 0 0 4px;
 }
 
 .contact-heading p {
-    font-size: 16px;
+    font-size: 11px;
     margin: 0;
 }
 
 /* TWO-COLUMN LAYOUT */
-
 .contact-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 64px;
 }
 
-/* =========================
-   CONTACT FORM
-========================= */
-
+/* FORM */
 .contact-form h2 {
-    font-size: 21px;
-    font-weight: 900;
-    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 800;
+    margin: 0 0 14px;
 }
 
 .form-group {
-    margin-bottom: 24px;
+    margin-bottom: 27px;
 }
 
 .form-group label {
     display: block;
-    font-size: 16px;
-    margin-bottom: 4px;
+    font-size: 9px;
+    margin-bottom: 5px;
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #d5dce3;
-    border-radius: 3px;
-    font-size: 16px;
+    padding: 7px;
+    border: none;
+    border-bottom: 1px solid #dedede;
+    border-radius: 0;
     font-family: inherit;
+    font-size: 12px;
+    background-color: #ffffff;
 }
 
 .form-group input {
-    height: 49px;
+    height: 28px;
 }
 
 .form-group textarea {
-    min-height: 118px;
+    height: 55px;
+    border: 1px solid #dedede;
+    border-radius: 3px;
+    background-color: #eeeeee;
     resize: vertical;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
-    outline: 2px solid #a51f26;
+    outline: 1px solid #a51f26;
     outline-offset: 2px;
 }
 
 /* SUBMIT BUTTON */
-
 .submit-button {
+    width: 111px;
+    height: 26px;
     background-color: #a51f26;
-    color: white;
+    color: #ffffff;
     border: none;
-    border-radius: 4px;
-    padding: 12px 34px;
-    font-size: 16px;
+    border-radius: 3px;
     font-family: inherit;
+    font-size: 11px;
     cursor: pointer;
 }
 
@@ -170,89 +155,82 @@ h1, h2 {
     background-color: #82171d;
 }
 
-/* =========================
-   CONTACT INFORMATION
-========================= */
-
+/* CONTACT INFORMATION */
 .contact-information {
     padding-top: 0;
 }
 
 .info-row {
     display: grid;
-    grid-template-columns: 90px 1fr;
-    gap: 10px;
-    margin-bottom: 18px;
-    font-size: 16px;
+    grid-template-columns: 50px 1fr;
+    gap: 9px;
+    margin-bottom: 9px;
+    align-items: center;
+    font-size: 9px;
 }
 
 .info-row strong {
-    font-weight: 700;
+    font-size: 11px;
+    font-weight: 800;
 }
 
 .location-heading {
-    font-family: 'Nata Sans', 'Inter', sans-serif;
-    font-size: 21px;
-    font-weight: 900;
-    margin: 20px 0 15px;
+    font-size: 11px;
+    font-weight: 800;
+    margin: 20px 0 5px;
 }
 
 .store-image {
     width: 100%;
-    height: auto;
+    height: 119px;
+    object-fit: cover;
     display: block;
 }
 
 .address {
-    color: #66717e;
-    font-size: 14px;
-    line-height: 1.5;
+    color: #999999;
+    font-size: 8px;
+    line-height: 1.35;
     margin-top: 8px;
 }
 
-/* =========================
-   FOOTER
-========================= */
-
+/* FOOTER */
 .site-footer {
     width: 100%;
-    background-color: #1D3353;
-    color: #F9F9F8;
-    padding-block: 1.5rem;
+    min-height: 113px;
+    background-color: #1d3558;
+    color: #ffffff;
 }
 
 .footer-container {
     max-width: 1250px;
+    min-height: 113px;
     margin: auto;
-    padding: 0 20px;
+    padding: 20px 9.5%;
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    justify-content: flex-start;
-    column-gap: 2rem;
-    row-gap: 1rem;
+    justify-content: space-between;
+    gap: 35px;
 }
 
 /* FOOTER LOGO */
-
 .footer-logo img {
-    width: 4rem;
-    height: 3.5rem;
+    width: 65px;
+    height: 45px;
     object-fit: contain;
-    display: block;
 }
 
 /* FOOTER NAVIGATION */
-
 .footer-navigation {
     display: flex;
     flex-direction: column;
+    gap: 3px;
 }
 
 .footer-navigation a {
-    color: #F9F9F8;
-    padding: 0.15rem 0;
-    font-size: 0.875rem;
+    color: #ffffff;
+    font-size: 8px;
+    font-weight: 600;
     text-decoration: none;
 }
 
@@ -260,105 +238,55 @@ h1, h2 {
     text-decoration: underline;
 }
 
-/* FOOTER LEGAL INFORMATION */
-
+/* FOOTER INFORMATION */
 .footer-information {
-    flex-basis: 100%;
-    color: #F9F9F8;
-    font-size: 0.75rem;
-    text-align: center;
-    margin-left: 0;
+    text-align: right;
 }
 
 .footer-links {
     display: flex;
-    justify-content: center;
-    gap: 0.75rem;
-    margin-bottom: 0.5rem;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 6px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-.footer-information a {
-    color: #F9F9F8;
+.footer-information a,
+.footer-information span {
+    color: #ffffff;
+    font-size: 7px;
     text-decoration: none;
 }
 
-.footer-information a:hover {
-    text-decoration: underline;
-}
-
-.footer-information span,
 .footer-information p {
-    color: #F9F9F8;
+    font-size: 7px;
+    margin: 8px 0 0;
 }
 
-.footer-information p {
-    margin: 0;
-}
-
-/* =========================
-   TABLET AND WIDER
-========================= */
-
-@media (min-width: 768px) {
-
-    .site-footer {
-        padding-block: 2.5rem;
-    }
-
-    .footer-container {
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        gap: 8rem;
-    }
-
-    .footer-logo img {
-        width: 5rem;
-        height: 4.5rem;
-    }
-
-    .footer-information {
-        flex-basis: auto;
-        margin-left: auto;
-        text-align: right;
-    }
-
-    .footer-links {
-        justify-content: flex-end;
-    }
-}
-
-/* =========================
-   MOBILE RESPONSIVENESS
-========================= */
-
+/* TABLET AND MOBILE */
 @media (max-width: 768px) {
-
-    /* HEADER */
 
     .header-container {
         flex-direction: column;
-        padding: 18px 15px;
-        gap: 15px;
+        justify-content: center;
+        padding: 12px 15px;
+        gap: 10px;
     }
 
     .navigation {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 14px;
+        gap: 16px;
     }
 
-    /* CONTACT SECTION */
-
     .contact-section {
-        padding: 35px 20px;
+        min-height: auto;
+        padding: 40px 25px 50px;
     }
 
     .contact-heading {
-        margin-bottom: 30px;
-    }
-
-    .contact-heading h1 {
-        font-size: 25px;
+        margin-bottom: 35px;
     }
 
     .contact-container {
@@ -366,17 +294,26 @@ h1, h2 {
         gap: 35px;
     }
 
-    /* FOOTER */
+    .contact-form,
+    .contact-information {
+        width: 100%;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .store-image {
+        height: auto;
+        max-height: 250px;
+    }
 
     .footer-container {
         flex-direction: column;
+        justify-content: center;
         text-align: center;
-        gap: 2rem;
-    }
-
-    .footer-logo img {
-        width: 4rem;
-        height: 3.5rem;
+        gap: 18px;
+        padding: 25px 20px;
     }
 
     .footer-navigation {
@@ -389,6 +326,5 @@ h1, h2 {
 
     .footer-links {
         justify-content: center;
-        flex-wrap: wrap;
     }
 }
