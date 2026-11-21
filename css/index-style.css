@@ -55,7 +55,7 @@ h5 {
     display: flex;
     align-items: center;
 	
-	background-image: url("hero-bg.png");
+	background-image: url("images/hero-bg.png");
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -100,7 +100,7 @@ h5 {
     display: flex;
     align-items: center;
 	
-	background-image: url("about-bg.png");
+	background-image: url("images/about-bg.png");
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
