@@ -281,3 +281,6 @@ body {
         flex-wrap: wrap;
     }
 }
+body {
+    outline: 5px solid red !important;
+}
