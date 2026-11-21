@@ -7,7 +7,7 @@
 ========================= */
 
 :root {
-    --brand-red: #a51f20;
+    --brand-red: #a51f26;
     --footer-navy: #1d3558;
     --text: #171717;
     --muted: #555;
@@ -30,36 +30,34 @@ body {
 }
 
 /* =========================
-   HEADER
+   HEADER - MATCH CONTACT CSS
 ========================= */
 
 .site-header {
     width: 100%;
     min-height: 72px;
-    background: var(--brand-red);
-    color: #fff;
-    position: relative;
+    background-color: #a51f26;
+    color: white;
 }
 
 .header-inner {
-    width: 100%;
     max-width: 1250px;
     min-height: 72px;
-    margin: 0 auto;
+    margin: auto;
     padding: 0 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-/* LOGO */
+/* HEADER LOGO */
 
 .wordmark {
-    color: #fff;
+    color: white;
     font-family: 'Nata Sans', sans-serif;
-    text-decoration: none;
     font-size: 23px;
     font-weight: 900;
+    text-decoration: none;
 }
 
 /* HEADER NAVIGATION */
@@ -71,18 +69,18 @@ body {
 }
 
 .main-nav a {
-    color: #fff;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    text-decoration: none;
+    color: white;
+    font-family: 'Nata Sans', sans-serif;
     font-size: 16px;
-    font-weight: 800;
+    font-weight: 900;
+    text-decoration: none;
 }
 
 .main-nav a:hover {
     text-decoration: underline;
 }
 
-/* MOBILE MENU BUTTON */
+/* MENU BUTTON */
 
 .menu-toggle {
     display: none;
@@ -97,7 +95,7 @@ body {
     width: 22px;
     height: 2px;
     margin: 4px 0;
-    background: #fff;
+    background: white;
 }
 
 /* =========================
@@ -185,21 +183,20 @@ body {
 }
 
 /* =========================
-   FOOTER
+   FOOTER - MATCH CONTACT CSS
 ========================= */
 
 .site-footer {
     width: 100%;
     min-height: 150px;
-    background: var(--footer-navy);
-    color: #fff;
+    background-color: #1d3558;
+    color: white;
 }
 
 .footer-inner {
-    width: 100%;
     max-width: 1250px;
     min-height: 150px;
-    margin: 0 auto;
+    margin: auto;
     padding: 25px 20px;
     display: flex;
     align-items: center;
@@ -229,11 +226,10 @@ body {
     display: flex;
     flex-direction: column;
     gap: 6px;
-    margin: 0;
 }
 
 .footer-nav a {
-    color: #fff;
+    color: white;
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 15px;
     font-weight: 400;
@@ -254,8 +250,8 @@ body {
 
 .footer-legal-links {
     display: flex;
-    align-items: center;
     justify-content: flex-end;
+    align-items: center;
     gap: 10px;
     padding-bottom: 12px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.65);
@@ -263,11 +259,10 @@ body {
 
 .footer-legal-links a,
 .footer-legal-links span {
-    color: #fff;
-    text-decoration: none;
+    color: white;
     font-size: 14px;
     font-weight: 700;
-    white-space: nowrap;
+    text-decoration: none;
 }
 
 .footer-legal-links a:hover {
@@ -275,27 +270,25 @@ body {
 }
 
 .footer-legal p {
-    margin: 20px 0 0;
     font-size: 13px;
     font-weight: 600;
+    margin-top: 20px;
     color: rgba(255, 255, 255, 0.9);
 }
 
 /* =========================
    MOBILE RESPONSIVENESS
+   MATCH CONTACT CSS
 ========================= */
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 
     /* HEADER */
 
-    .site-header {
-        min-height: 72px;
-    }
-
     .header-inner {
-        width: calc(100% - 30px);
-        min-height: 72px;
+        flex-direction: column;
+        padding: 18px 15px;
+        gap: 15px;
     }
 
     .wordmark {
@@ -303,24 +296,14 @@ body {
     }
 
     .menu-toggle {
-        display: block;
+        display: none;
     }
 
     .main-nav {
-        display: none;
-        position: absolute;
-        z-index: 5;
-        top: 72px;
-        left: 0;
-        right: 0;
-        padding: 18px;
-        background: var(--brand-red);
-        flex-direction: column;
-        gap: 18px;
-    }
-
-    .main-nav.is-open {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px;
     }
 
     .main-nav a {
@@ -331,11 +314,15 @@ body {
 
     .policy-main {
         min-height: auto;
-        padding: 42px 22px 55px;
+        padding: 35px 20px;
     }
 
     .policy-container {
         width: 100%;
+    }
+
+    .page-heading {
+        margin-bottom: 20px;
     }
 
     .page-heading h1 {
@@ -365,13 +352,11 @@ body {
     /* FOOTER */
 
     .footer-inner {
-        width: 100%;
-        min-height: auto;
-        padding: 25px 20px;
         flex-direction: column;
-        align-items: center;
         text-align: center;
+        align-items: center;
         gap: 22px;
+        padding: 25px 20px;
     }
 
     .equalizer-logo {
@@ -381,7 +366,6 @@ body {
 
     .footer-nav {
         align-items: center;
-        gap: 6px;
     }
 
     .footer-nav a {
@@ -389,24 +373,15 @@ body {
     }
 
     .footer-legal {
-        width: auto;
-        margin-top: 0;
         text-align: center;
     }
 
     .footer-legal-links {
         justify-content: center;
         flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    .footer-legal-links a,
-    .footer-legal-links span {
-        font-size: 14px;
     }
 
     .footer-legal p {
         font-size: 13px;
-        margin-top: 20px;
     }
 }
